@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="come&#231;oFim"/>
+        <attribute name="authors" value="vinicius.sgameleira"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-01 05:25:42 "/>
+        <attribute name="created" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOS0wMTsiMDU6MDg6MjQgIjs0MDI4"/>
+        <attribute name="edited" value="dmluaWNpdXMuc2dhbWVsZWlyYTtTQU4wNjc0NDIxVzExLTE7MjAyNS0wOS0wMTsiMDU6MjU6NDIgIjsxOzQxMzU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="starter, valorFinal, passo, i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <output expression="&quot;Digite o n&#250;mero inicial da Contagem&quot;" newline="True"/>
+            <input variable="starter"/>
+            <output expression="&quot;Digite o n&#250;mero final da contagem&quot;" newline="True"/>
+            <input variable="ValorFinal"/>
+            <output expression="&quot;Digite o intervalo entre os n&#250;meros da contagem&quot;" newline="True"/>
+            <input variable="passo"/>
+            <for variable="i" start="starter" end="ValorFinal" direction="inc" step="passo">
+                <if expression="i == starter">
+                    <then>
+                        <output expression="i &amp; &quot;- Inicio&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="i + passo &gt; valorFinal">
+                            <then>
+                                <output expression="i &amp; &quot;- FIM&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="i" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
